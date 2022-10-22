@@ -1,0 +1,251 @@
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  cursor: default;
+  box-sizing: border-box;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  transition: all 0.3s ease;
+}
+.show {
+  display: flex;
+  opacity: 1;
+}
+.hidden {
+  display: none;
+  opacity: 0;
+}
+.btn {
+  border: none;
+  outline: none;
+  padding: 10px;
+  border-radius: 9px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  text-transform: capitalize;
+}
+.btn:hover {
+  background-color: #576091;
+  color: white;
+  font-size: 18px;
+}
+.section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.menu {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: aquamarine;
+  height: 60px;
+}
+.paginacion {
+  position: fixed;
+  bottom: 0;
+  z-index: 11;
+  background-color: aquamarine;
+  height: 60px;
+}
+h3 {
+  padding: 5px;
+  text-align: center;
+  text-transform: capitalize;
+  font-weight: 200;
+  margin-bottom: 0px;
+}
+.contenedor {
+  width: 100%;
+}
+.contenedor .resultados {
+  width: 90%;
+  margin: 10px auto 80px auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+.contenedor .resultados .card {
+  box-sizing: border-box;
+  width: 300px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  background-color: gray;
+  border-radius: 9px;
+  position: relative;
+}
+.contenedor .resultados .card .poster {
+  width: 150px;
+  height: auto;
+}
+.contenedor .resultados .card .titles {
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  padding: 10px;
+}
+.contenedor .resultados .card .titles h3:first-child {
+  margin-top: 0px;
+}
+.spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 80%;
+  position: fixed;
+  z-index: 30;
+  margin: 60px auto;
+  /* line 69, styles.less */
+  /* line 73, styles.less */
+  /* line 83, styles.less */
+  /* line 86, styles.less */
+  /* line 90, styles.less */
+  /* line 93, styles.less */
+  /* line 97, styles.less */
+  /* line 100, styles.less */
+  /* line 104, styles.less */
+  /* line 107, styles.less */
+  /* line 111, styles.less */
+  /* line 114, styles.less */
+  /* line 118, styles.less */
+  /* line 121, styles.less */
+  /* line 125, styles.less */
+  /* line 128, styles.less */
+  /* line 132, styles.less */
+  /* line 135, styles.less */
+}
+.spinner.hidden {
+  width: 0px;
+  height: 0px;
+}
+.spinner .lds-roller {
+  margin-top: 50vh;
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.spinner .lds-roller div {
+  -webkit-animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  -webkit-transform-origin: 40px 40px;
+  transform-origin: 40px 40px;
+}
+.spinner .lds-roller div:after {
+  content: " ";
+  display: block;
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #fff;
+  margin: -4px 0 0 -4px;
+}
+.spinner .lds-roller div:nth-child(1) {
+  -webkit-animation-delay: -0.036s;
+  animation-delay: -0.036s;
+}
+.spinner .lds-roller div:nth-child(1):after {
+  top: 63px;
+  left: 63px;
+}
+.spinner .lds-roller div:nth-child(2) {
+  -webkit-animation-delay: -0.072s;
+  animation-delay: -0.072s;
+}
+.spinner .lds-roller div:nth-child(2):after {
+  top: 68px;
+  left: 56px;
+}
+.spinner .lds-roller div:nth-child(3) {
+  -webkit-animation-delay: -0.108s;
+  animation-delay: -0.108s;
+}
+.spinner .lds-roller div:nth-child(3):after {
+  top: 71px;
+  left: 48px;
+}
+.spinner .lds-roller div:nth-child(4) {
+  -webkit-animation-delay: -0.144s;
+  animation-delay: -0.144s;
+}
+.spinner .lds-roller div:nth-child(4):after {
+  top: 72px;
+  left: 40px;
+}
+.spinner .lds-roller div:nth-child(5) {
+  -webkit-animation-delay: -0.18s;
+  animation-delay: -0.18s;
+}
+.spinner .lds-roller div:nth-child(5):after {
+  top: 71px;
+  left: 32px;
+}
+.spinner .lds-roller div:nth-child(6) {
+  -webkit-animation-delay: -0.216s;
+  animation-delay: -0.216s;
+}
+.spinner .lds-roller div:nth-child(6):after {
+  top: 68px;
+  left: 24px;
+}
+.spinner .lds-roller div:nth-child(7) {
+  -webkit-animation-delay: -0.252s;
+  animation-delay: -0.252s;
+}
+.spinner .lds-roller div:nth-child(7):after {
+  top: 63px;
+  left: 17px;
+}
+.spinner .lds-roller div:nth-child(8) {
+  -webkit-animation-delay: -0.288s;
+  animation-delay: -0.288s;
+}
+.spinner .lds-roller div:nth-child(8):after {
+  top: 56px;
+  left: 12px;
+}
+@-webkit-keyframes lds-roller {
+  /* line 140, styles.less */
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  /* line 143, styles.less */
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes lds-roller {
+  /* line 140, styles.less */
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  /* line 143, styles.less */
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
